@@ -1,0 +1,446 @@
+2015-05-17 04:08:27,673 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:10:03,860 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:11:27,610 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:17:27,085 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:18:53,310 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:19:23,861 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:20:06,953 ERROR: Exception on /edit [POST] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 99, in edit
+    if form.validate_on_submit():
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_wtf/form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/Users/shookke/Documents/Programming/API/app/forms.py", line 22, in validate
+    user = User.query.filter_by(nickname=self.nickname.data).first()
+NameError: global name 'User' is not defined
+2015-05-17 04:20:32,223 ERROR: Exception on /edit [POST] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 99, in edit
+    if form.validate_on_submit():
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_wtf/form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/Users/shookke/Documents/Programming/API/app/forms.py", line 22, in validate
+    user = User.query.filter_by(nickname=self.nickname.data).first()
+NameError: global name 'User' is not defined
+2015-05-17 04:22:41,560 ERROR: Exception on /edit [POST] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 99, in edit
+    if form.validate_on_submit():
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_wtf/form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/Users/shookke/Documents/Programming/API/app/forms.py", line 22, in validate
+    return True
+NameError: global name 'User' is not defined
+2015-05-17 04:24:56,002 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:25:03,136 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:41:21,387 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:06:20,586 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:08:46,047 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:09:06,429 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:39:15,644 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:39:55,952 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:54:53,669 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:59:45,415 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:00:44,826 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:01:56,873 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:02:56,696 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:04:50,784 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:25:45,207 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:27:02,776 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:28:13,677 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:29:05,521 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:30:37,674 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:31:29,227 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:31:47,319 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:33:25,294 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:34:41,264 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:35:46,533 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:39:47,279 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:47:05,531 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:08:25,740 ERROR: Exception on /user/Kevin Shook2 [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 93, in user
+    return render_template('user.html',
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 12, in block "content"
+    <p>{{ user.followers.count() }} followers |
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'app.models.User object' has no attribute 'followers'
+2015-05-21 02:08:36,942 ERROR: Exception on /user/Kevin Shook2 [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 93, in user
+    return render_template('user.html',
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 12, in block "content"
+    <p>{{ user.followers.count() }} followers |
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'app.models.User object' has no attribute 'followers'
+2015-05-21 02:08:55,526 ERROR: Exception on /user/Kevin Shook [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 93, in user
+    return render_template('user.html',
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 12, in block "content"
+    <p>{{ user.followers.count() }} followers |
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'app.models.User object' has no attribute 'followers'
+2015-05-21 02:10:09,121 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:10:23,128 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:11:59,054 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:12:56,410 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:17:20,483 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:17:29,163 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:32:15,616 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 26, in index
+    @oid.loginhandler
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 5, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'form' is undefined
+2015-05-21 02:32:34,105 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 26, in index
+    @oid.loginhandler
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 5, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'form' is undefined
+2015-05-21 02:32:34,640 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 26, in index
+    @oid.loginhandler
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 5, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'form' is undefined
+2015-05-21 02:32:37,375 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 26, in index
+    @oid.loginhandler
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 5, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'form' is undefined
+2015-05-21 02:33:49,610 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:34:55,188 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:42:09,739 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:42:24,043 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:43:00,206 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:45:33,656 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:51:34,801 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:51:50,240 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:14:51,743 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:16:20,081 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:16:46,164 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:17:49,612 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:18:32,019 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:18:35,722 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:22:47,299 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:23:05,246 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:23:36,833 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:23:55,748 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:25:36,834 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:26:06,873 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:26:12,919 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:39:05,224 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:41:40,599 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:48:09,763 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:48:17,681 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:48:19,770 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:53:21,825 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:53:41,438 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:54:00,120 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:55:46,141 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 04:08:30,766 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 04:08:30,801 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 04:09:04,674 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-22 18:50:08,842 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
