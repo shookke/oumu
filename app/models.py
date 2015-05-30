@@ -18,6 +18,8 @@ followers = db.Table('follower',
 )
 
 #! User Model
+import re
+
 class User(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	nickname = db.Column(db.String(64), index=True, unique=True)
@@ -65,6 +67,10 @@ class User(db.Model):
 		
 	def followed_posts(self):
 		return Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(followers.c.follower_id == self.id).order_by(Post.timestamp.desc())
+	
+	@staticmethod
+	def make_valid_nickname(nickname):
+		return re.sub('[^a-zA-Z0-9_\.]', '', nickname)
 	
 	@staticmethod
 	def make_unique_nickname(nickname):
