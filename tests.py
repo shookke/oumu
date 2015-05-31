@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #!flask/bin/python
 import os
 import unittest
@@ -116,7 +117,13 @@ class TestCase(unittest.TestCase):
 			assert f3 == [p4, p3]
 			assert f4 == [p4]
 		
-	
+from app.ms_translate import microsoft_translate
+
+class TestCase(unittest.TestCase):
+    #...
+    def test_translation(self):
+        assert microsoft_translate(u'English', 'en', 'es') == u'Inglés'
+        assert microsoft_translate(u'Español', 'es', 'en') == u'Spanish'	
 		
 		
 if __name__ == '__main__':

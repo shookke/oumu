@@ -2,10 +2,34 @@
     <tr>
         <td width="70px"><a href="{{ url_for('user', nickname=post.author.nickname) }}"><img src="{{ post.author.avatar(70) }}" /></a></td>
         <td>
+            
+            <div class="option-link">
+            <!-- Split button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-default"><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true" title="{{ _('Options') }}"></span></a></button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{ post.id }}">{{ _('Edit') }}</a></li>
+                    {% if post.author.id == g.user.id %}
+                    <li><a href="{{ url_for('delete', id=post.id) }}">{{ _('Delete') }}</a></li>
+                    {% endif %}
+                    <li><a href="#">Something else here</a></li>
+                    {% if post.language != None and post.language != '' and post.language != g.local %}
+                    <li class="divider"></li>
+                    <li><a href="javascript:translate('{{ post.language }}', '{{ g.locale }}', '#post{{ post.id }}', '#post{{ post.id }}', '#loading{{ post.id }}')">{{ _('Translate') }}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            </div>
+            
             {% autoescape false %}
             <p>{{ _('%(nickname)s said %(when)s:', nickname = '<a href="%s">%s</a>' % (url_for('user', nickname=post.author.nickname), post.author.nickname), when=momentjs(post.timestamp).fromNow()) }}</p>
             {% endautoescape %}
-            <p><strong>{{ post.body }}</strong></p>
+            <p><strong><span id="post{{ post.id }}">{{ post.body }}</span></strong></p>
+            <p><img id="loading{{post.id}}" style="display: none" src="/static/img/loading.gif"></p>
         </td>
     </tr>
 </table>
