@@ -1,3 +1,4 @@
+/// <reference path="../../../typings/jquery/jquery.d.ts"/>
 $(document).ready(function(){
 	$(document.body).on('click', '.editPost', function(e){
 		var postID = $(this).attr('id');
@@ -12,7 +13,7 @@ $(document).ready(function(){
 			$('#editPostModal').modal('hide');
 			location.reload(true);
 		}).fail(
-			$('#post-edit-error').show()
+			//$('#post-edit-error').show()
 		);
     });
 });
