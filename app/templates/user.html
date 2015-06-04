@@ -5,7 +5,7 @@
     {% include 'flash.html' %}
     <div class="well well-large">
         <div class="pull-right">
-            <img src="{{ user.avatar(150) }}" class="img-polaroid">
+            <img src="{{ user.avatar(150) }}" class="img-thumbnail">
         </div>
         <h1>{{ user.nickname }}</h1>
         {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
@@ -20,9 +20,13 @@
         {% endif %}
         </p>
     </div>
+    <div class="row">
+    <div class="col-xs-6">
     {% for post in posts.items %}
         {% include 'post.html' %}
     {% endfor %}
+    </div>
+    </div>
     <ul class="pager">
         {% if posts.has_prev %}
         <li class="previous"><a href="{{ url_for('user', nickname=user.nickname, page=posts.prev_num) }}">{{ _('Newer posts') }}</a></li>

@@ -10,24 +10,24 @@ class LoginForm(Form):
 from app.models import User
 	
 class EditForm(Form):
-	nickname = StringField('nickname', validators=[DataRequired()])
+	body = StringField('body', validators=[DataRequired()])
 	about_me = TextAreaField('about_me', validators=[Length(min=0, max=140)])
 	
-	def __init__(self, original_nickname, *args, **kwargs):
+	def __init__(self, original_body, *args, **kwargs):
 		Form.__init__(self, *args, **kwargs)
-		self.original_nickname = original_nickname
+		self.original_body = original_body
 		
 	def validate(self):
 		if not Form.validate(self):
 			return False
-		if self.nickname.data == self.original_nickname:
+		if self.body.data == self.original_body:
 			return True
-		if self.nickname.data != User.make_valid_nickname(self.nickname.data):
-			sefl.nickname.errors.append(gettext('This nickname has invalid characters. Please use letters, numbers, dots and underscores only.'))
+		if self.body.data != User.make_valid_nickname(self.body.data):
+			sefl.body.errors.append(gettext('This body has invalid characters. Please use letters, numbers, dots and underscores only.'))
 			return False
-		user = User.query.filter_by(nickname=self.nickname.data).first()
+		user = User.query.filter_by(body=self.body.data).first()
 		if user is not None:
-			self.nickname.errors.append(gettext('This nickname is already in use. Please choose another one.'))
+			self.body.errors.append(gettext('This body is already in use. Please choose another one.'))
 			return False
 		return True
 		
@@ -36,3 +36,6 @@ class PostForm(Form):
 	
 class SearchForm(Form):
 	search = StringField('search', validators=[DataRequired()])
+	
+class EditPost(Form):
+	body = TextAreaField('body', validators=[Length(min=0, max=140)])

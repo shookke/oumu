@@ -12,6 +12,7 @@
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/scripts.js"></script>
     <script>
 function translate(sourceLang, destLang, sourceId, destId, loadingId) {
     $(destId).hide();
@@ -78,5 +79,6 @@ function translate(sourceLang, destLang, sourceId, destId, loadingId) {
         </div>
       </div>
      </div>  
+     {% include 'edit_post.html' %}
   </body>
 </html>

@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, session, url_for, request, g, jsonify
+from flask import render_template, flash, redirect, session, url_for, request, g, jsonify, make_response
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from guess_language import guessLanguage
 from flask.ext.babel import gettext
@@ -6,7 +6,7 @@ from datetime import datetime
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES
 from app import app, db, lm, oid, babel
 from ms_translate import microsoft_translate
-from .forms import LoginForm, EditForm, PostForm, SearchForm
+from .forms import LoginForm, EditForm, PostForm, SearchForm, EditPost
 from .models import User, Post
 from .emails import follower_notification
 
@@ -96,7 +96,8 @@ def after_login(resp):
 def logout():
 	logout_user()
 	return redirect(url_for('index'))
-	
+
+# User page 	
 @app.route('/user/<nickname>')
 @app.route('/user/<nickname>/<int:page>')
 @login_required
@@ -105,7 +106,7 @@ def user(nickname, page=1):
 	if user == None:
 		flash(gettext('User %(nickname)s not found.', nickname = nickname))
 		return redirect(url_for('index'))
-	posts = user.posts.paginate(page, POSTS_PER_PAGE, False)
+	posts = user.posts.order_by(Post.timestamp.desc()).paginate(page, POSTS_PER_PAGE, False)
 	return render_template('user.html',
 							user=user,
 							posts=posts)
@@ -186,6 +187,18 @@ def translate():
 			request.form['text'],
 			request.form['sourceLang'],
 			request.form['destLang']) })
+
+# Post Edit takes POST request, updates database, and sends response back to client			
+@app.route('/postEdit', methods=['POST'])
+@login_required
+def postEdit():
+	post = Post.query.filter_by(id=request.form['id']).first()
+	post.body = request.form['body']
+	db.session.add(post)
+	db.session.commit()
+	resp = make_response('{"test": "ok"}')
+	resp.headers['Content-Type'] = "application/json"
+	return resp
 			
 @app.route('/delete/<int:id>')
 @login_required

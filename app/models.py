@@ -101,6 +101,17 @@ class Post(db.Model):
 	def __repr__(self):
 		return '<Post %r>' % (self.body)
 		
+#! Business Page Model
+'''
+class BPage(db.Model):
+	__searchable__ = ['name']
+	
+	name = db.Column(db.String(20))
+	
+	def __repr__(self):
+		return '<BPage %r>' % (self.name)
+'''
+
 if enable_search:
 	whooshalchemy.whoosh_index(app, Post)
 	
